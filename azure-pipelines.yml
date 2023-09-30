@@ -36,7 +36,7 @@ steps:
 - task: UiPathPack@4
   inputs:
     versionType: 'AutoVersion'
-    projectJsonPath: '$(Build.SourcesDirectory)\src'
+    projectJsonPath: '$(Build.SourcesDirectory)\project.json'
     orchestratorConnection: 'ANALYSEUR'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     runWorkflowAnalysis: true
