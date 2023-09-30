@@ -17,8 +17,11 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-- task: UiPathTest@4
+
+- task: UiPathPack@4
   inputs:
-    testTarget: 'TestProject'
+    versionType: 'AutoVersion'
+    projectJsonPath: '$(Build.SourcesDirectory)'
     orchestratorConnection: 'ANALYSEUR'
-    folderName: 'My Workspace'
+    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    runWorkflowAnalysis: true
