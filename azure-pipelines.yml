@@ -33,9 +33,8 @@ steps:
   inputs:
     cliVersion: 'WIN_23.6.8581.19168'
 
-- task: UiPathPack@4
+- task: PublishBuildArtifacts@1
   inputs:
-    versionType: 'CurrentVersion'
-    projectJsonPath: '$(Build.SourcesDirectory)\project.json'
-    orchestratorConnection: 'ANALYSEUR'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
