@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1583.3333333333333,6303.333333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ioa="clr-namespace:InternalLabs.OpenAI.Activities;assembly=InternalLabs.OpenAI.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p4="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p5="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uoa="clr-namespace:UiPath.OmniPage.Activities;assembly=UiPath.OmniPage.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1583.3333333333333,12658" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:ioa="clr-namespace:InternalLabs.OpenAI.Activities;assembly=InternalLabs.OpenAI.Activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p4="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p5="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uoa="clr-namespace:UiPath.OmniPage.Activities;assembly=UiPath.OmniPage.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -212,23 +212,23 @@
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
-      <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="FINAL" sap:VirtualizedContainerService.HintSize="1593.3333333333333,6238.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FINAL" sap:VirtualizedContainerService.HintSize="1593.3333333333333,12593.333333333334" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="folder" />
       <Variable x:TypeArguments="sd2:DataTable" Name="ResumeDt" />
       <Variable x:TypeArguments="sd2:DataTable" Name="VarDt" />
       <Variable x:TypeArguments="sd2:DataTable" Name="CeritfDT" />
       <Variable x:TypeArguments="p8:DocumentTaxonomy" Name="taxonomy" />
-      <Variable x:TypeArguments="p7:ExtractionResult" Name="ExtractionResults" />
+      <Variable x:TypeArguments="p6:ExtractionResult" Name="ExtractionResults" />
       <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="matchesOutput" />
       <Variable x:TypeArguments="x:String" Name="emailMatches" />
       <Variable x:TypeArguments="x:String" Name="regexPattern" />
-      <Variable x:TypeArguments="p7:ExtractionResult" Name="ValidateExtractionResults" />
+      <Variable x:TypeArguments="p6:ExtractionResult" Name="ValidateExtractionResults" />
       <Variable x:TypeArguments="x:String" Name="DocumentTypeId" />
-      <Variable x:TypeArguments="p7:ClassificationResult[]" Name="ClassificationResults" />
+      <Variable x:TypeArguments="p6:ClassificationResult[]" Name="ClassificationResults" />
       <Variable x:TypeArguments="p3:Document" Name="Dom" />
       <Variable x:TypeArguments="s:String[]" Default="[{&quot;Extraire le Nom,  Numéro de téléphone, Email,  Adresse , Education, Compétences  et Expérience seulement et me donner un réponce ou chaque information est séparé à l'autre par un |  et extraire seulement  c'est  7 informations pour ne pas avoir une erreur Add Data Row: Input array is longer than the number of columns in this table&quot;}]" Modifiers="Mapped" Name="QuestionList" />
       <Variable x:TypeArguments="x:String" Name="inputText" />
@@ -244,14 +244,18 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap:VirtualizedContainerService.HintSize="1531.3333333333333,6128" sap2010:WorkflowViewState.IdRef="Sequence_48">
+    <Sequence sap:VirtualizedContainerService.HintSize="1531.3333333333333,12482.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_48">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd2:DataTable" Name="FicheDt" />
+        <Variable x:TypeArguments="sd2:DataTable" Name="PassDt" />
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Assign sap:VirtualizedContainerService.HintSize="1469.3333333333333,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
@@ -266,33 +270,47 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:BuildDataTable>
-      <ui:BuildDataTable DataTable="[ResumeDt]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1469.3333333333333,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_5" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Phone_x0020_number&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Email&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Adress&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Education&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Skills&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;expirience&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;">
+      <ui:BuildDataTable DataTable="[ResumeDt]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1469.3333333333333,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_5" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Phone_x0020_number&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Email&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Adress&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Education&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Skills&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;expirience&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;10000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:BuildDataTable>
-      <ui:BuildDataTable DataTable="[VarDt]" DisplayName="Build Data Table invoice/Reçue/fichedepaie" sap:VirtualizedContainerService.HintSize="1469.3333333333333,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_6" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+      <ui:BuildDataTable DataTable="[VarDt]" DisplayName="Build Data Table invoice" sap:VirtualizedContainerService.HintSize="1469.3333333333333,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_6" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:BuildDataTable>
+      <ui:BuildDataTable DataTable="[FicheDt]" DisplayName="Build Data Table fichedepaie" sap:VirtualizedContainerService.HintSize="1469.3333333333333,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_7" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:BuildDataTable>
+      <ui:BuildDataTable DataTable="[PassDt]" DisplayName="Build Data Table PassDt" sap:VirtualizedContainerService.HintSize="1469.3333333333333,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_8" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:BuildDataTable>
       <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="1469.3333333333333,108" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_2" Taxonomy="[taxonomy]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </p:LoadTaxonomy>
-      <ui:ForEachFileX DisplayName="For Each File In Folder" Folder="[folder]" sap:VirtualizedContainerService.HintSize="1469.3333333333333,3930.6666666666665" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="True" OrderBy="LastUpdatedDateNewFirst" SkipFolderWithoutPermission="True">
+      <ui:ForEachFileX DisplayName="For Each File In Folder" Folder="[folder]" sap:VirtualizedContainerService.HintSize="1469.3333333333333,11598.666666666666" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="True" OrderBy="LastUpdatedDateNewFirst" SkipFolderWithoutPermission="True">
         <ui:ForEachFileX.Body>
           <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
             <ActivityAction.Argument1>
@@ -301,14 +319,14 @@
             <ActivityAction.Argument2>
               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
             </ActivityAction.Argument2>
-            <Sequence DisplayName="Faire" sap:VirtualizedContainerService.HintSize="1435.3333333333333,3660.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_34">
+            <Sequence DisplayName="Faire" sap:VirtualizedContainerService.HintSize="1435.3333333333333,11328.666666666666" sap2010:WorkflowViewState.IdRef="Sequence_34">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[Dom]" DocumentPath="[CurrentFile.FullName]" DocumentText="[inputText]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="1373.3333333333333,70" sap2010:WorkflowViewState.IdRef="DigitizeDocument_2">
+              <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[Dom]" DocumentPath="[CurrentFile.FullName]" DocumentText="[inputText]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="1373.3333333333333,347.3333333333333" sap2010:WorkflowViewState.IdRef="DigitizeDocument_2">
                 <p:DigitizeDocument.OCREngine>
                   <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
                     <ActivityFunc.Argument1>
@@ -321,14 +339,14 @@
                   </ActivityFunc>
                 </p:DigitizeDocument.OCREngine>
               </p:DigitizeDocument>
-              <Sequence DisplayName="Classification Step" sap:VirtualizedContainerService.HintSize="1373.3333333333333,274.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_27">
+              <Sequence DisplayName="Classification Step" sap:VirtualizedContainerService.HintSize="1373.3333333333333,845.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_27">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <p1:ClassifyDocumentScope ClassificationResults="[ClassificationResults]" DisplayName="Classify Document Scope" DocumentObjectModel="[DOM]" DocumentPath="[CurrentFile.FullName]" DocumentText="[inputText]" sap:VirtualizedContainerService.HintSize="388,70" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI888ad791ded74af09859f163513ef962&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Sinorfi.rh.Cv&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Sinorfi.rh.Cv&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Sinorfi.rh.CertificatMédicale&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Sinorfi.rh.CertificatMédicale&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Sinorfi.finance.Facture&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Sinorfi.finance.Facture&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Sinorfi.rh.passeport&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Sinorfi.rh.passeport&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Sinorfi.finance.Reçu&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Sinorfi.finance.Reçu&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Sinorfi.finance.Fichedepaie&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Sinorfi.finance.Fichedepaie&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI888ad791ded74af09859f163513ef962&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI888ad791ded74af09859f163513ef962&quot;:[]}}">
+                <p1:ClassifyDocumentScope ClassificationResults="[ClassificationResults]" DisplayName="Classify Document Scope" DocumentObjectModel="[DOM]" DocumentPath="[CurrentFile.FullName]" DocumentText="[inputText]" sap:VirtualizedContainerService.HintSize="478,550" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI888ad791ded74af09859f163513ef962&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Sinorfi.rh.Cv&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Sinorfi.rh.Cv&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Sinorfi.rh.CertificatMédicale&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Sinorfi.rh.CertificatMédicale&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Sinorfi.finance.Facture&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Sinorfi.finance.Facture&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Sinorfi.rh.passeport&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Sinorfi.rh.passeport&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Sinorfi.finance.Reçu&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Sinorfi.finance.Reçu&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true},&quot;Sinorfi.finance.Fichedepaie&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Sinorfi.finance.Fichedepaie&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UI888ad791ded74af09859f163513ef962&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UI888ad791ded74af09859f163513ef962&quot;:[]}}">
                   <p1:ClassifyDocumentScope.Classifiers>
                     <p1:IntelligentKeywordClassifier LearningData="{x:Null}" TimeoutMs="{x:Null}" ApiKey="bDInkklsXq+6kEDmhEmgOmKahVE91wCKh8629U0TyOWQyKeTJxjeBMGpddetT3+p8CSmWZzN1od6KhzCeXiwaw==" DisplayName="Intelligent Keyword Classifier" Endpoint="https://du.uipath.com/svc/intelligentkeywords" sap:VirtualizedContainerService.HintSize="234,216" sap2010:WorkflowViewState.IdRef="IntelligentKeywordClassifier_3" LearningFilePath="DocumentProcessing\Classifiction\keyword.json" PerformDocumentSplitting="True" PersistenceId="UI888ad791ded74af09859f163513ef962" SendDocumentsForAlgorithmImprovements="True" UsePageNumbers="False">
                       <p1:IntelligentKeywordClassifier.ClassifierResult>
@@ -375,7 +393,7 @@
                       </p1:IntelligentKeywordClassifier.PredictionId>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </p1:IntelligentKeywordClassifier>
@@ -387,7 +405,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </p1:ClassifyDocumentScope>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Classification completed&quot;]">
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Classification completed&quot;]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -409,15 +427,15 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </Assign>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1373.3333333333333,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;le docyment est de type&quot;+DocumentTypeId]">
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="1373.3333333333333,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;le docyment est de type &quot;+DocumentTypeId]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:MessageBox>
-              <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="1373.3333333333333,2779.3333333333335" sap2010:WorkflowViewState.IdRef="IfElseIf_4">
+              <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="1373.3333333333333,3226.6666666666665" sap2010:WorkflowViewState.IdRef="IfElseIf_4">
                 <ui:IfElseIf.ConditionBlocks>
                   <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                     <ui:IfElseIfBlock BlockType="If" Condition="[DocumentTypeId=&quot;Sinorfi.rh.Cv&quot;]">
@@ -426,28 +444,28 @@
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <ioa:ExtractAndRespond ContinueOnError="{x:Null}" RawResponse="{x:Null}" SecretToken="{x:Null}" DisplayName="Ask GPT" Endpoint="https://staging.uipath.com/semanticproxy_/api/gptdu" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="ExtractAndRespond_3" QuestionList="[QuestionList]" ResultList="[ResponceList]" Text="[inputText]" TimeoutMS="60000">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ioa:ExtractAndRespond>
                           <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="388,76.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[ResponceList(0)(&quot;answer&quot;).ToString]">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:MessageBox>
                           <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[ResponceList(0)(&quot;answer&quot;).ToString.Split(&quot;|&quot;c)]" DataTable="[ResumeDt]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_3">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:AddDataRow>
@@ -455,7 +473,7 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:OutputDataTable>
@@ -464,56 +482,56 @@
                     </ui:IfElseIfBlock>
                     <ui:IfElseIfBlock BlockType="ElseIf" Condition="[DocumentTypeId=&quot;Sinorfi.rh.CertificatMédicale&quot;]">
                       <ui:IfElseIfBlock.Then>
-                        <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="512,463.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="512,690.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_30">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence sap:VirtualizedContainerService.HintSize="450,352.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                          <Sequence sap:VirtualizedContainerService.HintSize="450,580" sap2010:WorkflowViewState.IdRef="Sequence_29">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ioa:ExtractAndRespond ContinueOnError="{x:Null}" RawResponse="{x:Null}" SecretToken="{x:Null}" DisplayName="Ask GPT" Endpoint="https://staging.uipath.com/semanticproxy_/api/gptdu" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="ExtractAndRespond_4" QuestionList="[QuestionListCertif]" ResultList="[Responcelist2]" Text="[inputText]" TimeoutMS="60000">
+                            <ioa:ExtractAndRespond ContinueOnError="{x:Null}" RawResponse="{x:Null}" SecretToken="{x:Null}" DisplayName="Ask GPT" Endpoint="https://staging.uipath.com/semanticproxy_/api/gptdu" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="ExtractAndRespond_4" QuestionList="[QuestionListCertif]" ResultList="[Responcelist2]" Text="[inputText]" TimeoutMS="60000">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ioa:ExtractAndRespond>
-                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[Responcelist2(0)(&quot;answer&quot;).Tostring.Split(&quot;|&quot;c)]" DataTable="[CeritfDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="AddDataRow_4">
+                            <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[Responcelist2(0)(&quot;answer&quot;).Tostring.Split(&quot;|&quot;c)]" DataTable="[CeritfDT]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="388,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:AddDataRow>
-                            <ui:OutputDataTable DataTable="[CeritfDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="388,54" sap2010:WorkflowViewState.IdRef="OutputDataTable_4" Text="[TextDt]" />
+                            <ui:OutputDataTable DataTable="[CeritfDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="OutputDataTable_4" Text="[TextDt]" />
                           </Sequence>
                         </Sequence>
                       </ui:IfElseIfBlock.Then>
                     </ui:IfElseIfBlock>
                     <ui:IfElseIfBlock BlockType="Else">
                       <ui:IfElseIfBlock.Then>
-                        <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="1322,1252" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                        <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="1322,1472" sap2010:WorkflowViewState.IdRef="Sequence_33">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="Extraction Step" sap:VirtualizedContainerService.HintSize="1260,608.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                          <Sequence DisplayName="Extraction Step" sap:VirtualizedContainerService.HintSize="1260,828.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_31">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1198,54" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;Extraction Started&quot;]">
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1198,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Trace" Message="[&quot;Extraction Started&quot;]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -521,16 +539,16 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:LogMessage>
-                            <p4:DataExtractionScope DocumentTypeId="{x:Null}" ClassificationResult="[ClassificationResults(0)]" DisplayName="Data Extraction Scope" DocumentObjectModel="[DOM]" DocumentPath="[CurrentFile.FullName]" DocumentText="[inputText]" ExtractionResult="[ExtractionResults]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="1198,404" sap2010:WorkflowViewState.IdRef="DataExtractionScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI7265217c3af242279cb4b36fcfd16e86&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Sinorfi.rh.Cv&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.Cv.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.rh.Cv.Email&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Email&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.N°Téléphone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.N°Téléphone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Education&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Education&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Expérience&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Expérience&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Compétence&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Compétence&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Langue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Langue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.CertificatMédicale&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Facture&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Facture.N°facture&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.N°facture&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Facture.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;due-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Facture.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.passeport&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.passeport.nom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.nom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.prénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.prénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.datedenaissance&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.datedenaissance&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.n°pass&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.n°pass&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Reçu&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Fichedepaie&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.RIB&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.RIB&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}},&quot;UI588a862286b043baab5dd480db3b791a&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Sinorfi.rh.Cv&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.Cv.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Email&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Email&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.N°Téléphone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.N°Téléphone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Education&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Education&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Expérience&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Expérience&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Compétence&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Compétence&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Langue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Langue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.CertificatMédicale&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Facture&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Facture.N°facture&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.N°facture&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Facture.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Facture.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.passeport&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.passeport.nom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.nom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.prénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.prénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.datedenaissance&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.datedenaissance&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.n°pass&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.n°pass&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Reçu&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;receipt-number\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Reçu.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;tax\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Reçu.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Fichedepaie&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.RIB&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.RIB&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}},&quot;UIc76bff84ec0642be8736abd136c90e75&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Sinorfi.rh.Cv&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.Cv.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Email&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Email&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.N°Téléphone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.N°Téléphone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Education&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Education&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Expérience&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Expérience&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Compétence&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Compétence&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Langue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Langue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.CertificatMédicale&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Facture&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Facture.N°facture&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.N°facture&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;net-amount\&quot;&quot;,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Facture.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Facture.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.passeport&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.passeport.nom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.nom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.prénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.prénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.datedenaissance&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.datedenaissance&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.n°pass&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.n°pass&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Reçu&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Fichedepaie&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;employee\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;employee-id\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;employer\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;net-amount\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bank-name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Fichedepaie.RIB&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.RIB&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bank-account\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}},&quot;UIbc031d4348ef428999f1a830813b5946&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Sinorfi.rh.Cv&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.Cv.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Email&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Email&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.N°Téléphone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.N°Téléphone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Education&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Education&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Expérience&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Expérience&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Compétence&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Compétence&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Langue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Langue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;address\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.CertificatMédicale&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Facture&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Facture.N°facture&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.N°facture&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Facture.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Facture.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.passeport&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.passeport.nom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.nom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;last-name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.rh.passeport.prénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.prénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;first-name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.rh.passeport.datedenaissance&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.datedenaissance&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;birth-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.rh.passeport.adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;address\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.rh.passeport.n°pass&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.n°pass&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;id-no\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Reçu&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Fichedepaie&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.RIB&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.RIB&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI7265217c3af242279cb4b36fcfd16e86&quot;:&quot;0&quot;,&quot;UIc76bff84ec0642be8736abd136c90e75&quot;:&quot;0&quot;,&quot;UIbc031d4348ef428999f1a830813b5946&quot;:&quot;0&quot;,&quot;UI588a862286b043baab5dd480db3b791a&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI7265217c3af242279cb4b36fcfd16e86&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;billing-name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;billing-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;shipping-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;invoice-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;po-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-vat-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;payment-terms&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;net-amount&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;due-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;discount&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;shipping-charges&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;payment-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;billing-vat-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;shipping-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-email&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-account-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;iban&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;swift-code&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-routing-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;tax-rate&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;currency&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;item-po-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;line-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;part-no&quot;,&quot;SubOptions&quot;:null}]}]}],&quot;UIc76bff84ec0642be8736abd136c90e75&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;employer&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;employer-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;employee&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;employee-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;employee-id&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;period-payment&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;employee-title&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;paid-days&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;annual-leave&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;medical-leave&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;over-time&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-account&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total-earnings&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total-deductions&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;net-amount&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;lop-days&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;earnings&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;earning-amt&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;deductions&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;deductions-amt&quot;,&quot;SubOptions&quot;:null}]}]}],&quot;UIbc031d4348ef428999f1a830813b5946&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;document-type&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;last-name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;first-name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;birth-place&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;birth-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;sex&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;nationality&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;id-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;issued-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;expiration-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;issued-place&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;authority&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;id-no2&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;mrz&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;address&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;state&quot;,&quot;SubOptions&quot;:null}]}],&quot;UI588a862286b043baab5dd480db3b791a&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;phone&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;receipt-number&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;currency&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;expense-type&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null}]}]}]}}">
+                            <p4:DataExtractionScope DocumentTypeId="{x:Null}" ClassificationResult="[ClassificationResults(0)]" DisplayName="Data Extraction Scope" DocumentObjectModel="[DOM]" DocumentPath="[CurrentFile.FullName]" DocumentText="[inputText]" ExtractionResult="[ExtractionResults]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="1198,533.3333333333334" sap2010:WorkflowViewState.IdRef="DataExtractionScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI7265217c3af242279cb4b36fcfd16e86&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Sinorfi.rh.Cv&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.Cv.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.rh.Cv.Email&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Email&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.N°Téléphone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.N°Téléphone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Education&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Education&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Expérience&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Expérience&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Compétence&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Compétence&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Langue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Langue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.CertificatMédicale&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Facture&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Facture.N°facture&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.N°facture&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;invoice-no\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Facture.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;due-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Facture.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.passeport&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.passeport.nom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.nom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.prénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.prénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.datedenaissance&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.datedenaissance&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.n°pass&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.n°pass&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Reçu&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Fichedepaie&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.RIB&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.RIB&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}},&quot;UI588a862286b043baab5dd480db3b791a&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Sinorfi.rh.Cv&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.Cv.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Email&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Email&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.N°Téléphone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.N°Téléphone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Education&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Education&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Expérience&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Expérience&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Compétence&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Compétence&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Langue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Langue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.CertificatMédicale&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Facture&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Facture.N°facture&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.N°facture&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Facture.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Facture.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.passeport&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.passeport.nom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.nom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.prénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.prénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.datedenaissance&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.datedenaissance&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.n°pass&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.n°pass&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Reçu&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;receipt-number\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Reçu.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;tax\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Reçu.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;total\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Fichedepaie&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.RIB&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.RIB&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}},&quot;UIc76bff84ec0642be8736abd136c90e75&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Sinorfi.rh.Cv&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.Cv.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Email&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Email&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.N°Téléphone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.N°Téléphone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Education&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Education&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Expérience&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Expérience&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Compétence&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Compétence&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Langue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Langue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.CertificatMédicale&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Facture&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Facture.N°facture&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.N°facture&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;net-amount\&quot;&quot;,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Facture.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Facture.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.passeport&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.passeport.nom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.nom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.prénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.prénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.datedenaissance&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.datedenaissance&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.passeport.n°pass&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.n°pass&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Reçu&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Fichedepaie&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;employee\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;employee-id\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;employer\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;net-amount\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bank-name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.finance.Fichedepaie.RIB&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.RIB&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;bank-account\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}},&quot;UIbc031d4348ef428999f1a830813b5946&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Sinorfi.rh.Cv&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.Cv.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Email&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Email&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.N°Téléphone&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.N°Téléphone&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Education&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Education&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Expérience&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Expérience&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Compétence&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Compétence&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Langue&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Langue&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.Cv.Adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.Cv.Adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;address\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.CertificatMédicale&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.NometPrénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Nomdumédecin&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.CertificatMédicale.joursderepots&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Facture&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Facture.N°facture&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.N°facture&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Facture.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Facture.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Facture.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.rh.passeport&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.rh.passeport.nom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.nom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;last-name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.rh.passeport.prénom&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.prénom&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;first-name\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.rh.passeport.datedenaissance&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.datedenaissance&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;birth-date\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.rh.passeport.adresse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.adresse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;address\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;Sinorfi.rh.passeport.n°pass&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.rh.passeport.n°pass&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;id-no\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Reçu&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Numérodereçu&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.Date&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.Date&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantsansTva&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Reçu.MontantTotale&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Reçu.MontantTotale&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;},&quot;Sinorfi.finance.Fichedepaie&quot;:{&quot;FieldMappings&quot;:{&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emlpyer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Iddel'employer&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Emplyeur&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Salaire&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.Nomdubank&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Sinorfi.finance.Fichedepaie.RIB&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Sinorfi.finance.Fichedepaie.RIB&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI7265217c3af242279cb4b36fcfd16e86&quot;:&quot;0&quot;,&quot;UIc76bff84ec0642be8736abd136c90e75&quot;:&quot;0&quot;,&quot;UIbc031d4348ef428999f1a830813b5946&quot;:&quot;0&quot;,&quot;UI588a862286b043baab5dd480db3b791a&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI7265217c3af242279cb4b36fcfd16e86&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;billing-name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;billing-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;shipping-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;invoice-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;po-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-vat-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;payment-terms&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;net-amount&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;due-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;discount&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;shipping-charges&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;payment-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;billing-vat-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;shipping-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-email&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-account-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;iban&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;swift-code&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-routing-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;tax-rate&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;currency&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;item-po-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;line-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;part-no&quot;,&quot;SubOptions&quot;:null}]}]}],&quot;UIc76bff84ec0642be8736abd136c90e75&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;employer&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;employer-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;employee&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;employee-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;employee-id&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;period-payment&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;employee-title&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;paid-days&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;annual-leave&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;medical-leave&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;over-time&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;bank-account&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total-earnings&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total-deductions&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;net-amount&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;lop-days&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;earnings&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;earning-amt&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;deductions&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;deductions-amt&quot;,&quot;SubOptions&quot;:null}]}]}],&quot;UIbc031d4348ef428999f1a830813b5946&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;document-type&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;last-name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;first-name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;birth-place&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;birth-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;sex&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;nationality&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;id-no&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;issued-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;expiration-date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;issued-place&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;authority&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;id-no2&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;mrz&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;address&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;state&quot;,&quot;SubOptions&quot;:null}]}],&quot;UI588a862286b043baab5dd480db3b791a&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;name&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;vendor-addr&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;phone&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;date&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;total&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;tax&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;receipt-number&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;currency&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;expense-type&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;items&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;description&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;quantity&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;unit-price&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;line-amount&quot;,&quot;SubOptions&quot;:null}]}]}]}}">
                               <p4:DataExtractionScope.Extractors>
-                                <p5:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="AWexmMCMf8Q+07vMjBBy0E2MUcjj3lxyRySMzjCfvMcq2FG28hDVcnxYcyHI2tZOHdHZIHl6Se7A9cBxWfZwGQ==" Configuration="{}{&quot;Endpoint&quot;:&quot;https://du.uipath.com/ie/invoices&quot;,&quot;ApiKey&quot;:&quot;AWexmMCMf8Q+07vMjBBy0E2MUcjj3lxyRySMzjCfvMcq2FG28hDVcnxYcyHI2tZOHdHZIHl6Se7A9cBxWfZwGQ==&quot;,&quot;AvailableMLSkills&quot;:[]}" DisplayName="Facture Machine Learning Extractor" Endpoint="https://du.uipath.com/ie/invoices" sap:VirtualizedContainerService.HintSize="234,70" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_5" PersistenceId="UI7265217c3af242279cb4b36fcfd16e86" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
+                                <p5:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="AWexmMCMf8Q+07vMjBBy0E2MUcjj3lxyRySMzjCfvMcq2FG28hDVcnxYcyHI2tZOHdHZIHl6Se7A9cBxWfZwGQ==" Configuration="{}{&quot;Endpoint&quot;:&quot;https://du.uipath.com/ie/invoices&quot;,&quot;ApiKey&quot;:&quot;AWexmMCMf8Q+07vMjBBy0E2MUcjj3lxyRySMzjCfvMcq2FG28hDVcnxYcyHI2tZOHdHZIHl6Se7A9cBxWfZwGQ==&quot;,&quot;AvailableMLSkills&quot;:[]}" DisplayName="Facture Machine Learning Extractor" Endpoint="https://du.uipath.com/ie/invoices" sap:VirtualizedContainerService.HintSize="234,199.33333333333334" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_5" PersistenceId="UI7265217c3af242279cb4b36fcfd16e86" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
                                   <p5:MachineLearningExtractor.AvailableMLSkills>
                                     <scg:List x:TypeArguments="x:String" Capacity="0" />
                                   </p5:MachineLearningExtractor.AvailableMLSkills>
                                   <p5:MachineLearningExtractor.DocumentBounds>
-                                    <InArgument x:TypeArguments="p7:ResultsDocumentBounds">
-                                      <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds">
-                                        <DelegateInArgument x:TypeArguments="p7:ResultsDocumentBounds" Name="DocumentBounds" />
+                                    <InArgument x:TypeArguments="p6:ResultsDocumentBounds">
+                                      <DelegateArgumentValue x:TypeArguments="p6:ResultsDocumentBounds">
+                                        <DelegateInArgument x:TypeArguments="p6:ResultsDocumentBounds" Name="DocumentBounds" />
                                       </DelegateArgumentValue>
                                     </InArgument>
                                   </p5:MachineLearningExtractor.DocumentBounds>
@@ -556,16 +574,16 @@
                                     </InArgument>
                                   </p5:MachineLearningExtractor.DocumentText>
                                   <p5:MachineLearningExtractor.ExtractorDocumentType>
-                                    <InArgument x:TypeArguments="p6:ExtractorDocumentType">
-                                      <DelegateArgumentValue x:TypeArguments="p6:ExtractorDocumentType">
-                                        <DelegateInArgument x:TypeArguments="p6:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                                    <InArgument x:TypeArguments="p7:ExtractorDocumentType">
+                                      <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
+                                        <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
                                       </DelegateArgumentValue>
                                     </InArgument>
                                   </p5:MachineLearningExtractor.ExtractorDocumentType>
                                   <p5:MachineLearningExtractor.ExtractorResult>
-                                    <OutArgument x:TypeArguments="p6:ExtractorResult">
-                                      <DelegateArgumentReference x:TypeArguments="p6:ExtractorResult">
-                                        <DelegateOutArgument x:TypeArguments="p6:ExtractorResult" Name="ExtractorResult" />
+                                    <OutArgument x:TypeArguments="p7:ExtractorResult">
+                                      <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
+                                        <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
                                       </DelegateArgumentReference>
                                     </OutArgument>
                                   </p5:MachineLearningExtractor.ExtractorResult>
@@ -582,14 +600,14 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </p5:MachineLearningExtractor>
-                                <p5:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="hW6jEmDttPAKAHXPLsSYW28jnggwTTsQW+ceL1RG6zt/glxnRkgj7v2OruIE/SHutFJVtJPmJqQUsdSTHU/k0A==" Configuration="{}{&quot;Endpoint&quot;:&quot;https://du.uipath.com/ie/receipts&quot;,&quot;ApiKey&quot;:&quot;hW6jEmDttPAKAHXPLsSYW28jnggwTTsQW+ceL1RG6zt/glxnRkgj7v2OruIE/SHutFJVtJPmJqQUsdSTHU/k0A==&quot;,&quot;AvailableMLSkills&quot;:[]}" DisplayName="Reçu Machine Learning Extractor" Endpoint="https://du.uipath.com/ie/receipts" sap:VirtualizedContainerService.HintSize="234,70" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_6" PersistenceId="UI588a862286b043baab5dd480db3b791a" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
+                                <p5:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="hW6jEmDttPAKAHXPLsSYW28jnggwTTsQW+ceL1RG6zt/glxnRkgj7v2OruIE/SHutFJVtJPmJqQUsdSTHU/k0A==" Configuration="{}{&quot;Endpoint&quot;:&quot;https://du.uipath.com/ie/receipts&quot;,&quot;ApiKey&quot;:&quot;hW6jEmDttPAKAHXPLsSYW28jnggwTTsQW+ceL1RG6zt/glxnRkgj7v2OruIE/SHutFJVtJPmJqQUsdSTHU/k0A==&quot;,&quot;AvailableMLSkills&quot;:[]}" DisplayName="Reçu Machine Learning Extractor" Endpoint="https://du.uipath.com/ie/receipts" sap:VirtualizedContainerService.HintSize="234,199.33333333333334" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_6" PersistenceId="UI588a862286b043baab5dd480db3b791a" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
                                   <p5:MachineLearningExtractor.AvailableMLSkills>
                                     <scg:List x:TypeArguments="x:String" Capacity="0" />
                                   </p5:MachineLearningExtractor.AvailableMLSkills>
                                   <p5:MachineLearningExtractor.DocumentBounds>
-                                    <InArgument x:TypeArguments="p7:ResultsDocumentBounds">
-                                      <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds">
-                                        <DelegateInArgument x:TypeArguments="p7:ResultsDocumentBounds" Name="DocumentBounds" />
+                                    <InArgument x:TypeArguments="p6:ResultsDocumentBounds">
+                                      <DelegateArgumentValue x:TypeArguments="p6:ResultsDocumentBounds">
+                                        <DelegateInArgument x:TypeArguments="p6:ResultsDocumentBounds" Name="DocumentBounds" />
                                       </DelegateArgumentValue>
                                     </InArgument>
                                   </p5:MachineLearningExtractor.DocumentBounds>
@@ -615,16 +633,16 @@
                                     </InArgument>
                                   </p5:MachineLearningExtractor.DocumentText>
                                   <p5:MachineLearningExtractor.ExtractorDocumentType>
-                                    <InArgument x:TypeArguments="p6:ExtractorDocumentType">
-                                      <DelegateArgumentValue x:TypeArguments="p6:ExtractorDocumentType">
-                                        <DelegateInArgument x:TypeArguments="p6:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                                    <InArgument x:TypeArguments="p7:ExtractorDocumentType">
+                                      <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
+                                        <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
                                       </DelegateArgumentValue>
                                     </InArgument>
                                   </p5:MachineLearningExtractor.ExtractorDocumentType>
                                   <p5:MachineLearningExtractor.ExtractorResult>
-                                    <OutArgument x:TypeArguments="p6:ExtractorResult">
-                                      <DelegateArgumentReference x:TypeArguments="p6:ExtractorResult">
-                                        <DelegateOutArgument x:TypeArguments="p6:ExtractorResult" Name="ExtractorResult" />
+                                    <OutArgument x:TypeArguments="p7:ExtractorResult">
+                                      <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
+                                        <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
                                       </DelegateArgumentReference>
                                     </OutArgument>
                                   </p5:MachineLearningExtractor.ExtractorResult>
@@ -636,14 +654,14 @@
                                     </InArgument>
                                   </p5:MachineLearningExtractor.PredictionId>
                                 </p5:MachineLearningExtractor>
-                                <p5:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="hW6jEmDttPAKAHXPLsSYW28jnggwTTsQW+ceL1RG6zt/glxnRkgj7v2OruIE/SHutFJVtJPmJqQUsdSTHU/k0A==" Configuration="{}{&quot;Endpoint&quot;:&quot;https://du.uipath.com/ie/payslips&quot;,&quot;ApiKey&quot;:&quot;hW6jEmDttPAKAHXPLsSYW28jnggwTTsQW+ceL1RG6zt/glxnRkgj7v2OruIE/SHutFJVtJPmJqQUsdSTHU/k0A==&quot;,&quot;AvailableMLSkills&quot;:[]}" DisplayName="fiche de paie Machine Learning Extractor" Endpoint="https://du.uipath.com/ie/payslips" sap:VirtualizedContainerService.HintSize="234,70" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_7" PersistenceId="UIc76bff84ec0642be8736abd136c90e75" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
+                                <p5:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="hW6jEmDttPAKAHXPLsSYW28jnggwTTsQW+ceL1RG6zt/glxnRkgj7v2OruIE/SHutFJVtJPmJqQUsdSTHU/k0A==" Configuration="{}{&quot;Endpoint&quot;:&quot;https://du.uipath.com/ie/payslips&quot;,&quot;ApiKey&quot;:&quot;hW6jEmDttPAKAHXPLsSYW28jnggwTTsQW+ceL1RG6zt/glxnRkgj7v2OruIE/SHutFJVtJPmJqQUsdSTHU/k0A==&quot;,&quot;AvailableMLSkills&quot;:[]}" DisplayName="fiche de paie Machine Learning Extractor" Endpoint="https://du.uipath.com/ie/payslips" sap:VirtualizedContainerService.HintSize="234,199.33333333333334" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_7" PersistenceId="UIc76bff84ec0642be8736abd136c90e75" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
                                   <p5:MachineLearningExtractor.AvailableMLSkills>
                                     <scg:List x:TypeArguments="x:String" Capacity="0" />
                                   </p5:MachineLearningExtractor.AvailableMLSkills>
                                   <p5:MachineLearningExtractor.DocumentBounds>
-                                    <InArgument x:TypeArguments="p7:ResultsDocumentBounds">
-                                      <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds">
-                                        <DelegateInArgument x:TypeArguments="p7:ResultsDocumentBounds" Name="DocumentBounds" />
+                                    <InArgument x:TypeArguments="p6:ResultsDocumentBounds">
+                                      <DelegateArgumentValue x:TypeArguments="p6:ResultsDocumentBounds">
+                                        <DelegateInArgument x:TypeArguments="p6:ResultsDocumentBounds" Name="DocumentBounds" />
                                       </DelegateArgumentValue>
                                     </InArgument>
                                   </p5:MachineLearningExtractor.DocumentBounds>
@@ -669,16 +687,16 @@
                                     </InArgument>
                                   </p5:MachineLearningExtractor.DocumentText>
                                   <p5:MachineLearningExtractor.ExtractorDocumentType>
-                                    <InArgument x:TypeArguments="p6:ExtractorDocumentType">
-                                      <DelegateArgumentValue x:TypeArguments="p6:ExtractorDocumentType">
-                                        <DelegateInArgument x:TypeArguments="p6:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                                    <InArgument x:TypeArguments="p7:ExtractorDocumentType">
+                                      <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
+                                        <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
                                       </DelegateArgumentValue>
                                     </InArgument>
                                   </p5:MachineLearningExtractor.ExtractorDocumentType>
                                   <p5:MachineLearningExtractor.ExtractorResult>
-                                    <OutArgument x:TypeArguments="p6:ExtractorResult">
-                                      <DelegateArgumentReference x:TypeArguments="p6:ExtractorResult">
-                                        <DelegateOutArgument x:TypeArguments="p6:ExtractorResult" Name="ExtractorResult" />
+                                    <OutArgument x:TypeArguments="p7:ExtractorResult">
+                                      <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
+                                        <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
                                       </DelegateArgumentReference>
                                     </OutArgument>
                                   </p5:MachineLearningExtractor.ExtractorResult>
@@ -695,14 +713,14 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </p5:MachineLearningExtractor>
-                                <p5:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="hW6jEmDttPAKAHXPLsSYW28jnggwTTsQW+ceL1RG6zt/glxnRkgj7v2OruIE/SHutFJVtJPmJqQUsdSTHU/k0A==" Configuration="{}{&quot;Endpoint&quot;:&quot;https://du.uipath.com/ie/id_cards&quot;,&quot;ApiKey&quot;:&quot;hW6jEmDttPAKAHXPLsSYW28jnggwTTsQW+ceL1RG6zt/glxnRkgj7v2OruIE/SHutFJVtJPmJqQUsdSTHU/k0A==&quot;,&quot;AvailableMLSkills&quot;:[]}" DisplayName="Passport Machine Learning Extractor" Endpoint="https://du.uipath.com/ie/passports" sap:VirtualizedContainerService.HintSize="234,70" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_8" PersistenceId="UIbc031d4348ef428999f1a830813b5946" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
+                                <p5:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="hW6jEmDttPAKAHXPLsSYW28jnggwTTsQW+ceL1RG6zt/glxnRkgj7v2OruIE/SHutFJVtJPmJqQUsdSTHU/k0A==" Configuration="{}{&quot;Endpoint&quot;:&quot;https://du.uipath.com/ie/id_cards&quot;,&quot;ApiKey&quot;:&quot;hW6jEmDttPAKAHXPLsSYW28jnggwTTsQW+ceL1RG6zt/glxnRkgj7v2OruIE/SHutFJVtJPmJqQUsdSTHU/k0A==&quot;,&quot;AvailableMLSkills&quot;:[]}" DisplayName="Passport Machine Learning Extractor" Endpoint="https://du.uipath.com/ie/passports" sap:VirtualizedContainerService.HintSize="234,199.33333333333334" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_8" PersistenceId="UIbc031d4348ef428999f1a830813b5946" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
                                   <p5:MachineLearningExtractor.AvailableMLSkills>
                                     <scg:List x:TypeArguments="x:String" Capacity="0" />
                                   </p5:MachineLearningExtractor.AvailableMLSkills>
                                   <p5:MachineLearningExtractor.DocumentBounds>
-                                    <InArgument x:TypeArguments="p7:ResultsDocumentBounds">
-                                      <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds">
-                                        <DelegateInArgument x:TypeArguments="p7:ResultsDocumentBounds" Name="DocumentBounds" />
+                                    <InArgument x:TypeArguments="p6:ResultsDocumentBounds">
+                                      <DelegateArgumentValue x:TypeArguments="p6:ResultsDocumentBounds">
+                                        <DelegateInArgument x:TypeArguments="p6:ResultsDocumentBounds" Name="DocumentBounds" />
                                       </DelegateArgumentValue>
                                     </InArgument>
                                   </p5:MachineLearningExtractor.DocumentBounds>
@@ -728,16 +746,16 @@
                                     </InArgument>
                                   </p5:MachineLearningExtractor.DocumentText>
                                   <p5:MachineLearningExtractor.ExtractorDocumentType>
-                                    <InArgument x:TypeArguments="p6:ExtractorDocumentType">
-                                      <DelegateArgumentValue x:TypeArguments="p6:ExtractorDocumentType">
-                                        <DelegateInArgument x:TypeArguments="p6:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                                    <InArgument x:TypeArguments="p7:ExtractorDocumentType">
+                                      <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
+                                        <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
                                       </DelegateArgumentValue>
                                     </InArgument>
                                   </p5:MachineLearningExtractor.ExtractorDocumentType>
                                   <p5:MachineLearningExtractor.ExtractorResult>
-                                    <OutArgument x:TypeArguments="p6:ExtractorResult">
-                                      <DelegateArgumentReference x:TypeArguments="p6:ExtractorResult">
-                                        <DelegateOutArgument x:TypeArguments="p6:ExtractorResult" Name="ExtractorResult" />
+                                    <OutArgument x:TypeArguments="p7:ExtractorResult">
+                                      <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
+                                        <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
                                       </DelegateArgumentReference>
                                     </OutArgument>
                                   </p5:MachineLearningExtractor.ExtractorResult>
@@ -752,7 +770,7 @@
                               </p4:DataExtractionScope.Extractors>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -762,14 +780,14 @@
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <p:PresentValidationStation AutomaticExtractionResults="[ExtractionResults]" DisplayName="Present Validation Station" DocumentObjectModel="[Dom]" DocumentPath="[CurrentFile.FullName]" DocumentText="[inputText]" sap:VirtualizedContainerService.HintSize="388,382" sap2010:WorkflowViewState.IdRef="PresentValidationStation_3" ShowOnlyRelevantPageRange="False" Taxonomy="[taxonomy]" ValidatedExtractionResults="[ValidateExtractionResults]">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </p:PresentValidationStation>
@@ -781,15 +799,20 @@
                 </ui:IfElseIf.ConditionBlocks>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:IfElseIf>
-              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1373.3333333333333,54" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1373.3333333333333,312.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                 <ui:CommentOut.Body>
-                  <Sequence DisplayName="Activités ignorées" sap2010:WorkflowViewState.IdRef="Sequence_50">
-                    <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="1373.3333333333333,54" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[CurrentFile.FullName]">
+                  <Sequence DisplayName="Activités ignorées" sap:VirtualizedContainerService.HintSize="450,192.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="388,82" sap2010:WorkflowViewState.IdRef="DeleteFileX_2" Path="[CurrentFile.FullName]">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -799,265 +822,358 @@
                   </Sequence>
                 </ui:CommentOut.Body>
               </ui:CommentOut>
+              <ui:IfElseIf DisplayName="Export Step" sap:VirtualizedContainerService.HintSize="1373.3333333333333,5952" sap2010:WorkflowViewState.IdRef="IfElseIf_6">
+                <ui:IfElseIf.ConditionBlocks>
+                  <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                    <ui:IfElseIfBlock BlockType="If" Condition="[DocumentTypeId=&quot;Sinorfi.rh.Cv&quot;]">
+                      <ui:IfElseIfBlock.Then>
+                        <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="610.6666666666666,684" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="ResumeExport" sap:VirtualizedContainerService.HintSize="548.6666666666666,573.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.6666666666667,306.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Activités ignorées" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[ResumeDt]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="resumeoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:WriteRange>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                            </ui:CommentOut>
+                            <ui:AppendRange DataTable="[ResumeDt]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="486.6666666666667,116" sap2010:WorkflowViewState.IdRef="AppendRange_14" SheetName="resumeoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:AppendRange>
+                          </Sequence>
+                        </Sequence>
+                      </ui:IfElseIfBlock.Then>
+                    </ui:IfElseIfBlock>
+                    <ui:IfElseIfBlock BlockType="ElseIf" Condition="[DocumentTypeId=&quot;Sinorfi.rh.CertificatMédicale&quot;]">
+                      <ui:IfElseIfBlock.Then>
+                        <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="610.6666666666666,684" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="ExportCertif" sap:VirtualizedContainerService.HintSize="548.6666666666666,573.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.6666666666667,306.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Activités ignorées" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[CeritfDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Certifoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </ui:WriteRange>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                            </ui:CommentOut>
+                            <ui:AppendRange DataTable="[CeritfDT]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="486.6666666666667,116" sap2010:WorkflowViewState.IdRef="AppendRange_9" SheetName="Certifoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:AppendRange>
+                          </Sequence>
+                        </Sequence>
+                      </ui:IfElseIfBlock.Then>
+                    </ui:IfElseIfBlock>
+                    <ui:IfElseIfBlock BlockType="Else">
+                      <ui:IfElseIfBlock.Then>
+                        <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="1224.6666666666667,4216.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Export Step" sap:VirtualizedContainerService.HintSize="1162.6666666666667,4106" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="TableName" />
+                              <Variable x:TypeArguments="sd2:DataSet" Name="dataset" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1100.6666666666667,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Export started&quot;]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:LogMessage>
+                            <p4:ExportExtractionResults DataSet="[dataset]" DisplayName="Export Extraction Results" ExtractionResult="[ValidateExtractionResults]" sap:VirtualizedContainerService.HintSize="1100.6666666666667,182" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_2" IncludeConfidence="False" IncludeOCRConfidence="False">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </p4:ExportExtractionResults>
+                            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="1100.6666666666667,3588.6666666666665" sap2010:WorkflowViewState.IdRef="IfElseIf_5">
+                              <ui:IfElseIf.ConditionBlocks>
+                                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                  <ui:IfElseIfBlock BlockType="If" Condition="[DocumentTypeId=&quot;Sinorfi.rh.passeport&quot;]">
+                                    <ui:IfElseIfBlock.Then>
+                                      <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="610.6666666666666,860.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:MergeDataTable Destination="[PassDt]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="548.6666666666666,136.66666666666666" sap2010:WorkflowViewState.IdRef="MergeDataTable_5" MissingSchemaAction="Add" Source="[dataset.Tables(0)]">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:MergeDataTable>
+                                        <Sequence DisplayName="ExportPasseport" sap:VirtualizedContainerService.HintSize="548.6666666666666,573.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.6666666666667,306.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                                            <ui:CommentOut.Body>
+                                              <Sequence DisplayName="Activités ignorées" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[PassDt]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="Passeportoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:WriteRange>
+                                              </Sequence>
+                                            </ui:CommentOut.Body>
+                                          </ui:CommentOut>
+                                          <ui:AppendRange DataTable="[PassDt]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="486.6666666666667,116" sap2010:WorkflowViewState.IdRef="AppendRange_10" SheetName="Passeportoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:AppendRange>
+                                        </Sequence>
+                                      </Sequence>
+                                    </ui:IfElseIfBlock.Then>
+                                  </ui:IfElseIfBlock>
+                                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[DocumentTypeId= &quot;Sinorfi.finance.Fichedepaie&quot;]">
+                                    <ui:IfElseIfBlock.Then>
+                                      <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="610.6666666666666,900.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:MergeDataTable Destination="[FicheDt]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="548.6666666666666,136.66666666666666" sap2010:WorkflowViewState.IdRef="MergeDataTable_6" MissingSchemaAction="Add" Source="[dataset.Tables(0)]">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:MergeDataTable>
+                                        <Sequence DisplayName="Exportfichedepaie" sap:VirtualizedContainerService.HintSize="548.6666666666666,613.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.6666666666667,346.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                            <ui:CommentOut.Body>
+                                              <Sequence DisplayName="Activités ignorées" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[FicheDt]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="Fichedepaieoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:WriteRange>
+                                              </Sequence>
+                                            </ui:CommentOut.Body>
+                                          </ui:CommentOut>
+                                          <ui:AppendRange DataTable="[FicheDt]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="486.6666666666667,116" sap2010:WorkflowViewState.IdRef="AppendRange_11" SheetName="Fichedepaieoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:AppendRange>
+                                        </Sequence>
+                                      </Sequence>
+                                    </ui:IfElseIfBlock.Then>
+                                  </ui:IfElseIfBlock>
+                                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[DocumentTypeId= &quot;Sinorfi.finance.Reçu&quot;]">
+                                    <ui:IfElseIfBlock.Then>
+                                      <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="512,337.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Sequence DisplayName="ExportReçue" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:AppendRange DataTable="[VarDT]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="AppendRange_12" SheetName="Recçeoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:AppendRange>
+                                        </Sequence>
+                                      </Sequence>
+                                    </ui:IfElseIfBlock.Then>
+                                  </ui:IfElseIfBlock>
+                                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[DocumentTypeId = &quot;Sinorfi.finance.Facture&quot;]">
+                                    <ui:IfElseIfBlock.Then>
+                                      <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="610.6666666666666,900.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:MergeDataTable Destination="[VarDt]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="548.6666666666666,136.66666666666666" sap2010:WorkflowViewState.IdRef="MergeDataTable_7" MissingSchemaAction="Add" Source="[dataset.Tables(0)]">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:MergeDataTable>
+                                        <Sequence DisplayName="ExportFacture" sap:VirtualizedContainerService.HintSize="548.6666666666666,613.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.6666666666667,346.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                                            <ui:CommentOut.Body>
+                                              <Sequence DisplayName="Activités ignorées" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[VarDT]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Factureoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:WriteRange>
+                                              </Sequence>
+                                            </ui:CommentOut.Body>
+                                          </ui:CommentOut>
+                                          <ui:AppendRange DataTable="[VarDT]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="486.6666666666667,116" sap2010:WorkflowViewState.IdRef="AppendRange_13" SheetName="Factureoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:AppendRange>
+                                        </Sequence>
+                                      </Sequence>
+                                    </ui:IfElseIfBlock.Then>
+                                  </ui:IfElseIfBlock>
+                                </sc:BindingList>
+                              </ui:IfElseIf.ConditionBlocks>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:IfElseIf>
+                          </Sequence>
+                        </Sequence>
+                      </ui:IfElseIfBlock.Then>
+                    </ui:IfElseIfBlock>
+                  </sc:BindingList>
+                </ui:IfElseIf.ConditionBlocks>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:IfElseIf>
+              <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="1373.3333333333333,82" sap2010:WorkflowViewState.IdRef="DeleteFileX_3" Path="[CurrentFile.FullName]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:DeleteFileX>
             </Sequence>
           </ActivityAction>
         </ui:ForEachFileX.Body>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachFileX>
-      <ui:IfElseIf DisplayName="Export Step" sap:VirtualizedContainerService.HintSize="1469.3333333333333,1473.3333333333333" sap2010:WorkflowViewState.IdRef="IfElseIf_6">
-        <ui:IfElseIf.ConditionBlocks>
-          <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
-            <ui:IfElseIfBlock BlockType="If" Condition="[DocumentTypeId=&quot;Sinorfi.rh.Cv&quot;]">
-              <ui:IfElseIfBlock.Then>
-                <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="610.6666666666666,684" sap2010:WorkflowViewState.IdRef="Sequence_36">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="ResumeExport" sap:VirtualizedContainerService.HintSize="548.6666666666666,573.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_35">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[ResumeDt]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="486.6666666666667,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="resumeoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:WriteRange>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.6666666666667,306.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                      <ui:CommentOut.Body>
-                        <Sequence DisplayName="Activités ignorées" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_49">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <ui:AppendRange DataTable="[ResumeDt]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="AppendRange_8" SheetName="resumeoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </ui:AppendRange>
-                        </Sequence>
-                      </ui:CommentOut.Body>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:CommentOut>
-                  </Sequence>
-                </Sequence>
-              </ui:IfElseIfBlock.Then>
-            </ui:IfElseIfBlock>
-            <ui:IfElseIfBlock BlockType="ElseIf" Condition="[DocumentTypeId=&quot;Sinorfi.rh.CertificatMédicale&quot;]">
-              <ui:IfElseIfBlock.Then>
-                <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="512,337.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_38">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="ExportCertif" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_37">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:AppendRange DataTable="[CeritfDT]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="AppendRange_9" SheetName="Certifoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:AppendRange>
-                  </Sequence>
-                </Sequence>
-              </ui:IfElseIfBlock.Then>
-            </ui:IfElseIfBlock>
-            <ui:IfElseIfBlock BlockType="Else">
-              <ui:IfElseIfBlock.Then>
-                <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="450,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_47">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="Export Step" sap:VirtualizedContainerService.HintSize="625.3333333333334,2459.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_26">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="TableName" />
-                      <Variable x:TypeArguments="sd2:DataSet" Name="dataset" />
-                    </Sequence.Variables>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="563.3333333333334,54" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Export started&quot;]">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:LogMessage>
-                    <p4:ExportExtractionResults DataSet="[dataset]" DisplayName="Export Extraction Results" ExtractionResult="[ValidateExtractionResults]" sap:VirtualizedContainerService.HintSize="563.3333333333334,182" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_2" IncludeConfidence="False" IncludeOCRConfidence="False">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </p4:ExportExtractionResults>
-                    <ui:MergeDataTable Destination="[VarDt]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="563.3333333333334,54" sap2010:WorkflowViewState.IdRef="MergeDataTable_2" MissingSchemaAction="Add" Source="[dataset.Tables(0)]" />
-                    <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="563.3333333333334,1938.6666666666667" sap2010:WorkflowViewState.IdRef="IfElseIf_5">
-                      <ui:IfElseIf.ConditionBlocks>
-                        <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
-                          <ui:IfElseIfBlock BlockType="If" Condition="[DocumentTypeId=&quot;Sinorfi.rh.passeport&quot;]">
-                            <ui:IfElseIfBlock.Then>
-                              <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="512,337.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_40">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="ExportPasseport" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_39">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ui:AppendRange DataTable="[VarDT]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="AppendRange_10" SheetName="Passeportoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </ui:AppendRange>
-                                </Sequence>
-                              </Sequence>
-                            </ui:IfElseIfBlock.Then>
-                          </ui:IfElseIfBlock>
-                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[DocumentTypeId= &quot;Sinorfi.finance.Fichedepaie&quot;]">
-                            <ui:IfElseIfBlock.Then>
-                              <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="512,337.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_42">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="Exportfichedepaie" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_41">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ui:AppendRange DataTable="[VarDT]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="AppendRange_11" SheetName="Fichedepaieoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </ui:AppendRange>
-                                </Sequence>
-                              </Sequence>
-                            </ui:IfElseIfBlock.Then>
-                          </ui:IfElseIfBlock>
-                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[DocumentTypeId= &quot;Sinorfi.finance.Reçu&quot;]">
-                            <ui:IfElseIfBlock.Then>
-                              <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="512,337.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_44">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="ExportReçue" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_43">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ui:AppendRange DataTable="[VarDT]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="AppendRange_12" SheetName="Recçeoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </ui:AppendRange>
-                                </Sequence>
-                              </Sequence>
-                            </ui:IfElseIfBlock.Then>
-                          </ui:IfElseIfBlock>
-                          <ui:IfElseIfBlock BlockType="ElseIf" Condition="[DocumentTypeId = &quot;Sinorfi.finance.Facture&quot;]">
-                            <ui:IfElseIfBlock.Then>
-                              <Sequence DisplayName="Corps" sap:VirtualizedContainerService.HintSize="512,337.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_46">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="ExportFacture" sap:VirtualizedContainerService.HintSize="450,226.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_45">
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                  <ui:AppendRange DataTable="[VarDT]" DisplayName="Append Range Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="AppendRange_13" SheetName="Factureoutput" WorkbookPath="DocumentProcessing\Output\DataTable.xlsx">
-                                    <sap:WorkflowViewStateService.ViewState>
-                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                      </scg:Dictionary>
-                                    </sap:WorkflowViewStateService.ViewState>
-                                  </ui:AppendRange>
-                                </Sequence>
-                              </Sequence>
-                            </ui:IfElseIfBlock.Then>
-                          </ui:IfElseIfBlock>
-                        </sc:BindingList>
-                      </ui:IfElseIf.ConditionBlocks>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </ui:IfElseIf>
-                  </Sequence>
-                </Sequence>
-              </ui:IfElseIfBlock.Then>
-            </ui:IfElseIfBlock>
-          </sc:BindingList>
-        </ui:IfElseIf.ConditionBlocks>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:IfElseIf>
     </Sequence>
   </Sequence>
 </Activity>
