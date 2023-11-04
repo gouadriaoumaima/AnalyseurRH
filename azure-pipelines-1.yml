@@ -22,12 +22,10 @@ steps:
   inputs:
     versionType: 'AutoVersion'
     projectJsonPath: '$(Build.SourcesDirectory)'
-    outputType: 'Process'
-    orchestratorConnection: 'connectionDEvOps'
+    orchestratorConnection: 'TokenConnection'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     runWorkflowAnalysis: true
     traceLevel: 'Information'
-
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
