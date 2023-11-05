@@ -32,3 +32,8 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
+- task: UiPathDeploy@4
+  inputs:
+    orchestratorConnection: 'AzDevops'
+    packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
+    folderName: 'Shared'
