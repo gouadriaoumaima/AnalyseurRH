@@ -22,18 +22,18 @@ steps:
   inputs:
     versionType: 'AutoVersion'
     projectJsonPath: '$(Build.SourcesDirectory)'
-    orchestratorConnection: 'TokenConnection'
+    orchestratorConnection: 'FinalConnection'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     runWorkflowAnalysis: true
     traceLevel: 'Information'
+- task: UiPathTest@4
+  inputs:
+    testTarget: 'TestProject'
+    orchestratorConnection: 'FinalConnection'
+    folderName: 'Shared'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-- task: UiPathDeploy@4
-  inputs:
-    orchestratorConnection: 'AzDevops'
-    packagesPath: '$(Build.ArtifactStagingDirectory)\Output'
-    folderName: 'Shared'
