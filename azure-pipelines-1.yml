@@ -26,11 +26,6 @@ steps:
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     runWorkflowAnalysis: true
     traceLevel: 'Information'
-- task: UiPathTest@4
-  inputs:
-    testTarget: 'TestSet'
-    orchestratorConnection: 'FinalConnection'
-    folderName: 'Shared'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
