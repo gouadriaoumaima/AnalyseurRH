@@ -26,9 +26,11 @@ steps:
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
     runWorkflowAnalysis: true
     traceLevel: 'Information'
-- task: SonarQubeAnalyze@5
+- task: UiPathTest@4
   inputs:
-    jdkversion: 'JAVA_HOME_11_X64'
+    testTarget: 'TestSet'
+    orchestratorConnection: 'FinalConnection'
+    folderName: 'Shared'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
