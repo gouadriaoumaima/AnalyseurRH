@@ -33,7 +33,6 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-- task: Docker@2
+- task: DockerInstaller@0
   inputs:
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    dockerVersion: '17.09.0-ce'
