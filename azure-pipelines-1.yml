@@ -33,3 +33,7 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
+- task: Docker@2
+  inputs:
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
