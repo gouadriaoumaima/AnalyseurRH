@@ -40,3 +40,4 @@ steps:
 - task: Docker@2
   inputs:
     command: 'start'
+    container: 'uipath'
