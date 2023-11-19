@@ -33,6 +33,10 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-- task: UiPathInstallPlatform@4
+- task: UiPathTest@4
   inputs:
-    cliVersion: 'WIN_23.6.8581.19168'
+    testTarget: 'TestProject'
+    orchestratorConnection: 'FinalConnection'
+    folderName: 'Shared'
+    traceLevel: 'Information'
+    attachRobotLogs: true
