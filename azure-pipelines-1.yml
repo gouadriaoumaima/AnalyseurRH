@@ -33,11 +33,6 @@ steps:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-- task: DockerInstaller@0
+- task: UiPathInstallPlatform@4
   inputs:
-    dockerVersion: '17.09.0-ce'
-
-- task: Docker@2
-  inputs:
-    command: 'start'
-    container: 'uipath'
+    cliVersion: 'WIN_23.6.8581.19168'
